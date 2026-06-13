@@ -110,6 +110,10 @@ User opens digest
     write results back to the cache with expiry + tags
 ```
 
+<p align="center">
+  <img src="docs/assets/global-feed-pool.svg" alt="Global Feed Pool Architecture" width="640">
+</p>
+
 Each card type also gets a `highlight_snippet` field from the analysis stage —
 a single sentence, max ~18 words, with the color-coded spans described above.
 If a field can't be determined with reasonable confidence, it's marked
@@ -129,11 +133,19 @@ provider you prefer (OpenRouter is the easiest starting point, since one key
 covers many models including free ones), and GripC0re uses it for your
 personal pipeline runs on cache misses.
 
+<p align="center">
+  <img src="docs/assets/byok-architecture.svg" alt="Bring Your Own Key Architecture" width="640">
+</p>
+
 ---
 
 ## status & roadmap
 
 This is early. Here's roughly where things stand:
+
+<p align="center">
+  <img src="docs/assets/roadmap.svg" alt="GripC0re Roadmap" width="800">
+</p>
 
 - [x] design spec — pipeline, bento grid, global cache, trays, BYOK
 - [ ] digest pipeline (collect → filter → analyse → render)
