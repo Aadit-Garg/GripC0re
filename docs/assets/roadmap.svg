@@ -1,0 +1,84 @@
+<svg width="1000" height="550" viewBox="0 0 1000 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Turbulence displacement filter to simulate wobbly hand-drawn strokes -->
+    <filter id="rough-edge" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <!-- Dark sketchpad canvas -->
+  <rect width="1000" height="550" rx="16" fill="#18181C" />
+  
+  <!-- Canvas Grid -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="1">
+    <path d="M 0,50 L 1000,50 M 0,100 L 1000,100 M 0,150 L 1000,150 M 0,200 L 1000,200 M 0,250 L 1000,250 M 0,300 L 1000,300 M 0,350 L 1000,350 M 0,400 L 1000,400 M 0,450 L 1000,450 M 0,500 L 1000,500 M 0,550 L 1000,550" />
+    <path d="M 100,0 L 100,550 M 200,0 L 200,550 M 300,0 L 300,550 M 400,0 L 400,550 M 500,0 L 500,550 M 600,0 L 600,550 M 700,0 L 700,550 M 800,0 L 800,550 M 900,0 L 900,550" />
+  </g>
+  
+  <!-- Section Title -->
+  <text x="50" y="55" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="28" font-weight="bold" fill="#ECE6DC" filter="url(#rough-edge)">GripC0re Development Roadmap</text>
+  <text x="50" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#7E7E8A" filter="url(#rough-edge)">CHRONOLOGICAL MILESTONES &amp; PROGRESS TRACKER</text>
+
+  <!-- ── PROGRESS PATH (Hand-drawn wobbly line connecting milestones) ── -->
+  <path d="M 150,220 Q 250,260 350,220 T 550,220 T 750,220 T 900,220" stroke="#ECE6DC" stroke-opacity="0.3" stroke-width="4" stroke-dasharray="10 5" fill="none" filter="url(#rough-edge)" />
+
+  <!-- ── MILESTONE 1: Hello World (Completed) ── -->
+  <g transform="translate(80, 150)" filter="url(#rough-edge)">
+    <circle cx="40" cy="40" r="24" fill="#14B8A6" stroke="#ECE6DC" stroke-width="2" />
+    <!-- Checkmark -->
+    <path d="M 32,40 L 38,46 L 48,34" stroke="#18181C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <text x="-10" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="bold" fill="#ECE6DC">v1. Hello Server</text>
+    <text x="-10" y="105" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">FastAPI baseline running</text>
+    <text x="-10" y="122" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Serving static HTML/CSS/JS</text>
+  </g>
+
+  <!-- ── MILESTONE 2: DB & Profiles (Next) ── -->
+  <g transform="translate(260, 150)" filter="url(#rough-edge)">
+    <circle cx="40" cy="40" r="24" fill="#242429" stroke="#E05A47" stroke-width="2.5" />
+    <text x="34" y="46" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" font-weight="bold" fill="#E05A47">2</text>
+    
+    <text x="-10" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="bold" fill="#ECE6DC">v2. DB &amp; Profiles</text>
+    <text x="-10" y="105" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">SQLite DB + SQLAlchemy</text>
+    <text x="-10" y="122" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Save profile parameters</text>
+  </g>
+
+  <!-- ── MILESTONE 3: Authentication ── -->
+  <g transform="translate(440, 150)" filter="url(#rough-edge)">
+    <circle cx="40" cy="40" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
+    <text x="34" y="46" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">3</text>
+    
+    <text x="-10" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="bold" fill="#ECE6DC">v3. Security/JWT</text>
+    <text x="-10" y="105" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Bcrypt hashing protection</text>
+    <text x="-10" y="122" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Token validation interceptor</text>
+  </g>
+
+  <!-- ── MILESTONE 4: Digest & Gemini ── -->
+  <g transform="translate(620, 150)" filter="url(#rough-edge)">
+    <circle cx="40" cy="40" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
+    <text x="34" y="46" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">4</text>
+    
+    <text x="-10" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="bold" fill="#ECE6DC">v4. Digest &amp; Gemini</text>
+    <text x="-10" y="105" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">AI compiler pipeline</text>
+    <text x="-10" y="122" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Async HTTPX favicon crawler</text>
+  </g>
+
+  <!-- ── MILESTONE 5: Swipe Deck ── -->
+  <g transform="translate(800, 150)" filter="url(#rough-edge)">
+    <circle cx="40" cy="40" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
+    <text x="34" y="46" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">5</text>
+    
+    <text x="-10" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="bold" fill="#ECE6DC">v5. Swipe Discovery</text>
+    <text x="-10" y="105" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Swipable stack interface</text>
+    <text x="-10" y="122" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Vote logger inside database</text>
+  </g>
+
+  <!-- ── LEGEND / DETAILS BOARD (Bottom Left) ── -->
+  <g transform="translate(50, 380)" filter="url(#rough-edge)">
+    <rect width="900" height="120" rx="10" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
+    <text x="30" y="35" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="16" font-weight="bold" fill="#ECE6DC">Interactive Progress Note</text>
+    <text x="30" y="65" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#C2BCB2">We are currently developing Version 2: Database integration &amp; User settings profile parameters.</text>
+    <text x="30" y="90" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#7E7E8A">Each step is hand-coded by you, designed to prevent framework bloat and maintain complete control.</text>
+  </g>
+</svg>

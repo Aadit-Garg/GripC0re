@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/gripcore-wordmark.svg" alt="GripC0re" width="480">
+  <img src="Promotional_assets/Logo.png" alt="GripC0re" width="480">
 </p>
 
 <p align="center">
@@ -132,6 +132,10 @@ personal pipeline runs on cache misses.
 ---
 
 ## status & roadmap
+
+<p align="center">
+  <img src="docs/assets/roadmap.svg" alt="GripC0re development roadmap" width="800">
+</p>
 
 This is early. Here's roughly where things stand:
 
