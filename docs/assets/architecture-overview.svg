@@ -61,7 +61,7 @@
     <!-- SQLite database connection -->
     <rect x="20" y="285" width="260" height="50" rx="6" fill="#11100F" stroke="#333" />
     <text x="32" y="307" font-family="-apple-system, sans-serif" font-size="13" fill="#C2BCB2">SQLAlchemy models</text>
-    <text x="32" y="323" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">SQLite (gripcore.db)</text>
+    <text x="32" y="323" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">SQLite (gripc0re.db)</text>
   </g>
 
   <!-- ── 3. EXTERNAL PIPELINE (Gemini & Scraper) ── -->
