@@ -1,0 +1,47 @@
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and drop shadows -->
+  <defs>
+    <linearGradient id="terracotta-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <linearGradient id="cream-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9FAFB" />
+      <stop offset="100%" stop-color="#D1D5DB" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background container for dark preview support -->
+  <rect width="800" height="200" rx="16" fill="#11100F" />
+  
+  <g transform="translate(40, 30)">
+    <!-- Triple stack logo icon -->
+    <g transform="translate(0, 20)">
+      <!-- Back layer (accent color) -->
+      <rect x="25" y="5" width="90" height="90" rx="12" stroke="url(#terracotta-grad)" stroke-width="2.5" fill="none" opacity="0.4" />
+      <!-- Middle layer (cream color) -->
+      <rect x="15" y="15" width="90" height="90" rx="12" stroke="url(#cream-grad)" stroke-width="2.5" fill="none" opacity="0.75" />
+      <!-- Front layer (solid dark base with details) -->
+      <rect x="5" y="25" width="90" height="90" rx="12" fill="#1B1918" stroke="url(#cream-grad)" stroke-width="3" filter="url(#shadow)" />
+      
+      <!-- Inner icon details -->
+      <rect x="20" y="40" width="16" height="16" rx="3" stroke="url(#cream-grad)" stroke-width="2" fill="none" />
+      <line x1="48" y1="48" x2="80" y2="48" stroke="url(#cream-grad)" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="20" y1="72" x2="80" y2="72" stroke="url(#terracotta-grad)" stroke-width="3" stroke-linecap="round" />
+    </g>
+
+    <!-- Wordmark text -->
+    <g transform="translate(140, 85)">
+      <!-- Main brand name -->
+      <text x="0" y="0" font-family="Georgia, serif" font-size="64" font-weight="bold" font-style="italic" fill="url(#cream-grad)" letter-spacing="1">GripCore</text>
+      <!-- Accent dot -->
+      <circle cx="272" cy="-12" r="8" fill="url(#terracotta-grad)" />
+      
+      <!-- Subtitle -->
+      <text x="5" y="32" font-family="'JetBrains Mono', monospace, Arial" font-size="16" font-weight="500" fill="#8C8478" letter-spacing="4">CUT THE ROT, KEEP THE SIGNAL</text>
+    </g>
+  </g>
+</svg>
