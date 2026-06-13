@@ -1,99 +1,99 @@
 <svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Turbulence displacement filter to simulate wobbly hand-drawn strokes -->
-    <filter id="rough-edge" x="-10%" y="-10%" width="120%" height="120%">
+    <!-- Gentle wobbly filter for paths/shapes only -->
+    <filter id="gentle-rough" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </defs>
 
-  <!-- Dark sketchpad background -->
-  <rect width="1200" height="600" rx="16" fill="#18181C" />
+  <!-- Warm light canvas background -->
+  <rect width="1200" height="600" rx="16" fill="#FEF9F0" />
   
-  <!-- Grid background details to simulate canvas -->
-  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+  <!-- Light grid lines -->
+  <g opacity="0.15" stroke="#E5E0D8" stroke-width="1">
     <path d="M 0,50 L 1200,50 M 0,100 L 1200,100 M 0,150 L 1200,150 M 0,200 L 1200,200 M 0,250 L 1200,250 M 0,300 L 1200,300 M 0,350 L 1200,350 M 0,400 L 1200,400 M 0,450 L 1200,450 M 0,500 L 1200,500 M 0,550 L 1200,550" />
     <path d="M 100,0 L 100,600 M 200,0 L 200,600 M 300,0 L 300,600 M 400,0 L 400,600 M 500,0 L 500,600 M 600,0 L 600,600 M 700,0 L 700,600 M 800,0 L 800,600 M 900,0 L 900,600 M 1000,0 L 1000,600 M 1100,0 L 1100,600" />
   </g>
   
   <!-- Section Title -->
-  <text x="50" y="55" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="28" font-weight="bold" fill="#ECE6DC" filter="url(#rough-edge)">Bento Grid Digest Concept</text>
-  <text x="50" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#7E7E8A" filter="url(#rough-edge)">VISUAL LAYOUT AND VARIABLE-SPAN HIGHLIGHT MECHANICS</text>
+  <text x="50" y="55" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="28" font-weight="bold" fill="#18181C">Bento Grid Digest Concept</text>
+  <text x="50" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#6B6B76">VISUAL LAYOUT AND VARIABLE-SPAN HIGHLIGHT MECHANICS</text>
   
   <!-- ── CARD 1: Friction (Top Left) ── -->
-  <g transform="translate(50, 120)" filter="url(#rough-edge)">
-    <rect width="520" height="200" rx="10" fill="#242429" stroke="#E05A47" stroke-width="2" />
+  <g transform="translate(50, 120)">
+    <!-- Wobbly Box -->
+    <rect width="520" height="200" rx="10" fill="#FFFFFF" stroke="#18181C" stroke-width="2" filter="url(#gentle-rough)" />
     <!-- Label -->
-    <rect x="24" y="24" width="85" height="24" rx="6" fill="none" stroke="#E05A47" stroke-width="1.5" />
+    <rect x="24" y="24" width="85" height="24" rx="6" fill="rgba(224, 90, 71, 0.08)" stroke="#E05A47" stroke-width="1.5" filter="url(#gentle-rough)" />
     <text x="36" y="40" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" font-weight="bold" fill="#E05A47">Friction</text>
     
-    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#ECE6DC">ESP32 Matrix Pointer Alignment</text>
+    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#18181C">ESP32 Matrix Pointer Alignment</text>
     
-    <!-- Description with highlights -->
-    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       Matrix operations require <tspan fill="#E05A47" font-weight="bold">16-byte aligned pointers</tspan> inside 
     </text>
-    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       <tspan fill="#D97706" font-weight="bold">SRAM heap allocations</tspan> to avoid memory crashes.
     </text>
     
-    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#7E7E8A">Signal: 82 stars on GitHub • Source: community observation</text>
+    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#6B6B76">Signal: 82 stars on GitHub • Source: community observation</text>
   </g>
 
   <!-- ── CARD 2: Bridge (Top Right) ── -->
-  <g transform="translate(600, 120)" filter="url(#rough-edge)">
-    <rect width="550" height="200" rx="10" fill="#242429" stroke="#14B8A6" stroke-width="2" />
+  <g transform="translate(600, 120)">
+    <rect width="550" height="200" rx="10" fill="#FFFFFF" stroke="#18181C" stroke-width="2" filter="url(#gentle-rough)" />
     <!-- Label -->
-    <rect x="24" y="24" width="80" height="24" rx="6" fill="none" stroke="#14B8A6" stroke-width="1.5" />
+    <rect x="24" y="24" width="80" height="24" rx="6" fill="rgba(20, 184, 166, 0.08)" stroke="#14B8A6" stroke-width="1.5" filter="url(#gentle-rough)" />
     <text x="36" y="40" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" font-weight="bold" fill="#14B8A6">Bridge</text>
     
-    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#ECE6DC">atopile</text>
+    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#18181C">atopile</text>
     
-    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       Describe <tspan fill="#D97706" font-weight="bold">hardware circuits</tspan> in <tspan fill="#14B8A6" font-weight="bold">Python</tspan> and compile down to board 
     </text>
-    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       layouts automatically, bypassing visual schematic editors.
     </text>
     
-    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#7E7E8A">Language: Python • 1.2k Stars • 12 Open Issues</text>
+    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#6B6B76">Language: Python • 1.2k Stars • 12 Open Issues</text>
   </g>
 
   <!-- ── CARD 3: Deep Dive (Bottom Left) ── -->
-  <g transform="translate(50, 350)" filter="url(#rough-edge)">
-    <rect width="470" height="200" rx="10" fill="#242429" stroke="#D97706" stroke-width="2" />
+  <g transform="translate(50, 350)">
+    <rect width="470" height="200" rx="10" fill="#FFFFFF" stroke="#18181C" stroke-width="2" filter="url(#gentle-rough)" />
     <!-- Label -->
-    <rect x="24" y="24" width="95" height="24" rx="6" fill="none" stroke="#D97706" stroke-width="1.5" />
+    <rect x="24" y="24" width="95" height="24" rx="6" fill="rgba(217, 119, 6, 0.08)" stroke="#D97706" stroke-width="1.5" filter="url(#gentle-rough)" />
     <text x="34" y="40" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" font-weight="bold" fill="#D97706">Deep Dive</text>
     
-    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#ECE6DC">Measuring RF Attenuation</text>
+    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#18181C">Measuring RF Attenuation</text>
     
-    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       A comprehensive guide on designing <tspan fill="#D97706" font-weight="bold">microstrip feedlines</tspan>
     </text>
-    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       for custom FR4 PCB boards operating above 2.4 GHz.
     </text>
     
-    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#7E7E8A">Difficulty: Advanced • Source: journal article</text>
+    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#6B6B76">Difficulty: Advanced • Source: journal article</text>
   </g>
 
   <!-- ── CARD 4: Opportunity (Bottom Right) ── -->
-  <g transform="translate(550, 350)" filter="url(#rough-edge)">
-    <rect width="600" height="200" rx="10" fill="#242429" stroke="#A855F7" stroke-width="2" />
+  <g transform="translate(550, 350)">
+    <rect width="600" height="200" rx="10" fill="#FFFFFF" stroke="#18181C" stroke-width="2" filter="url(#gentle-rough)" />
     <!-- Label -->
-    <rect x="24" y="24" width="105" height="24" rx="6" fill="none" stroke="#A855F7" stroke-width="1.5" />
+    <rect x="24" y="24" width="105" height="24" rx="6" fill="rgba(168, 85, 247, 0.08)" stroke="#A855F7" stroke-width="1.5" filter="url(#gentle-rough)" />
     <text x="32" y="40" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" font-weight="bold" fill="#A855F7">Opportunity</text>
     
-    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#ECE6DC">Open-Source LoRaWAN Signal Mapper</text>
+    <text x="24" y="80" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="22" font-weight="bold" fill="#18181C">Open-Source LoRaWAN Signal Mapper</text>
     
-    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       A massive gap exists for an <tspan fill="#A855F7" font-weight="bold">offline telemetry mapper</tspan> that developers can 
     </text>
-    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#C2BCB2">
+    <text x="24" y="150" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="15" fill="#4B4B54">
       flash onto cheap ESP32 nodes to <tspan fill="#A855F7" font-weight="bold">map local signal strength</tspan>.
     </text>
     
-    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#7E7E8A">Effort: 2 Weeks • Prior Art: none found</text>
+    <text x="24" y="180" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#6B6B76">Effort: 2 Weeks • Prior Art: none found</text>
   </g>
 </svg>

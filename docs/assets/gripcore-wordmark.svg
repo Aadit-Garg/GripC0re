@@ -1,46 +1,46 @@
 <svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Turbulence displacement filter to simulate wobbly hand-drawn strokes -->
-    <filter id="rough-edge" x="-10%" y="-10%" width="120%" height="120%">
+    <!-- Gentle wobbly filter for paths/shapes only (NOT applied to text) -->
+    <filter id="gentle-rough" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </defs>
 
-  <!-- Dark sketchpad background -->
-  <rect width="800" height="200" rx="16" fill="#18181C" />
+  <!-- Warm light canvas background -->
+  <rect width="800" height="200" rx="16" fill="#FEF9F0" />
   
-  <!-- Grid background details to simulate canvas -->
-  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+  <!-- Light grid lines to simulate paper -->
+  <g opacity="0.15" stroke="#E5E0D8" stroke-width="1">
     <path d="M 0,40 L 800,40 M 0,80 L 800,80 M 0,120 L 800,120 M 0,160 L 800,160" />
     <path d="M 100,0 L 100,200 M 200,0 L 200,200 M 300,0 L 300,200 M 400,0 L 400,200 M 500,0 L 500,200 M 600,0 L 600,200 M 700,0 L 700,200" />
   </g>
 
   <g transform="translate(45, 30)">
     <!-- Hand-drawn stack icon -->
-    <g transform="translate(0, 15)" filter="url(#rough-edge)">
+    <g transform="translate(0, 15)" filter="url(#gentle-rough)">
       <!-- Back layer (accent) -->
-      <rect x="23" y="7" width="85" height="85" rx="8" stroke="#E05A47" stroke-width="2" fill="none" stroke-dasharray="100 5" />
-      <!-- Middle layer (cream) -->
-      <rect x="13" y="17" width="85" height="85" rx="8" stroke="#ECE6DC" stroke-width="2.2" fill="none" stroke-dasharray="120 4" />
-      <!-- Front layer -->
-      <rect x="3" y="27" width="85" height="85" rx="8" fill="#242429" stroke="#ECE6DC" stroke-width="2.5" />
+      <rect x="23" y="7" width="85" height="85" rx="8" stroke="#E05A47" stroke-width="2" fill="none" />
+      <!-- Middle layer -->
+      <rect x="13" y="17" width="85" height="85" rx="8" stroke="#18181C" stroke-width="2" fill="none" opacity="0.25" />
+      <!-- Front layer (solid paper white) -->
+      <rect x="3" y="27" width="85" height="85" rx="8" fill="#FFFFFF" stroke="#18181C" stroke-width="2.2" />
       
       <!-- Inside icon sketch lines -->
-      <rect x="18" y="42" width="16" height="16" rx="2" stroke="#ECE6DC" stroke-width="2" fill="none" />
-      <line x1="45" y1="50" x2="75" y2="50" stroke="#ECE6DC" stroke-width="2" />
-      <line x1="18" y1="72" x2="75" y2="72" stroke="#E05A47" stroke-width="2.5" />
+      <rect x="18" y="42" width="16" height="16" rx="2" stroke="#18181C" stroke-width="1.8" fill="none" />
+      <line x1="45" y1="50" x2="75" y2="50" stroke="#18181C" stroke-width="1.8" />
+      <line x1="18" y1="72" x2="75" y2="72" stroke="#E05A47" stroke-width="2.2" />
     </g>
 
-    <!-- Wordmark text -->
+    <!-- Wordmark text (clean w/o displacement for readability) -->
     <g transform="translate(130, 80)">
       <!-- Main brand name in Excalidraw handwriting style -->
-      <text x="0" y="0" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="64" font-weight="bold" fill="#ECE6DC" letter-spacing="2" filter="url(#rough-edge)">GripC0re</text>
+      <text x="0" y="0" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="64" font-weight="bold" fill="#18181C" letter-spacing="1">GripC0re</text>
       <!-- Accent dot -->
-      <circle cx="282" cy="-20" r="7" fill="#E05A47" filter="url(#rough-edge)" />
+      <circle cx="282" cy="-20" r="7" fill="#E05A47" filter="url(#gentle-rough)" />
       
       <!-- Subtitle -->
-      <text x="5" y="32" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="16" font-weight="bold" fill="#7E7E8A" letter-spacing="3" filter="url(#rough-edge)">cut the rot, keep the signal</text>
+      <text x="5" y="32" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="16" font-weight="bold" fill="#6B6B76" letter-spacing="3">cut the rot, keep the signal</text>
     </g>
   </g>
 </svg>

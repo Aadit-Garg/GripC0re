@@ -1,119 +1,120 @@
 <svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Turbulence displacement filter for wobbly hand-drawn strokes -->
-    <filter id="rough-edge" x="-10%" y="-10%" width="120%" height="120%">
+    <!-- Gentle wobbly filter for paths/shapes only -->
+    <filter id="gentle-rough" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </defs>
 
-  <!-- Dark sketchpad canvas -->
-  <rect width="1200" height="750" rx="16" fill="#18181C" />
+  <!-- Warm light canvas background -->
+  <rect width="1200" height="750" rx="16" fill="#FEF9F0" />
   
   <!-- Canvas Grid -->
-  <g opacity="0.04" stroke="#ffffff" stroke-width="1">
+  <g opacity="0.15" stroke="#E5E0D8" stroke-width="1">
     <path d="M 0,50 L 1200,50 M 0,100 L 1200,100 M 0,150 L 1200,150 M 0,200 L 1200,200 M 0,250 L 1200,250 M 0,300 L 1200,300 M 0,350 L 1200,350 M 0,400 L 1200,400 M 0,450 L 1200,450 M 0,500 L 1200,500 M 0,550 L 1200,550 M 0,600 L 1200,600 M 0,650 L 1200,650 M 0,700 L 1200,700" />
     <path d="M 100,0 L 100,750 M 200,0 L 200,750 M 300,0 L 300,750 M 400,0 L 400,750 M 500,0 L 500,750 M 600,0 L 600,750 M 700,0 L 700,750 M 800,0 L 800,750 M 900,0 L 900,750 M 1000,0 L 1000,750 M 1100,0 L 1100,750" />
   </g>
   
   <!-- Section Title -->
-  <text x="50" y="55" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="28" font-weight="bold" fill="#ECE6DC" filter="url(#rough-edge)">GripC0re 10-Phase Single Dev Roadmap</text>
-  <text x="50" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#7E7E8A" filter="url(#rough-edge)">GRANULAR, MANAGEABLE STEPS FOR LOCAL AND NETWORK PHASES</text>
+  <text x="50" y="55" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="28" font-weight="bold" fill="#18181C">GripC0re 10-Phase Single Dev Roadmap</text>
+  <text x="50" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#6B6B76">GRANULAR, MANAGEABLE STEPS FOR LOCAL AND NETWORK PHASES</text>
 
   <!-- ── WINDING PROGRESS PATH (Wobbly S-curve) ── -->
-  <path d="M 160,200 L 1040,200 C 1140,200 1140,380 1040,380 L 160,380 C 60,380 60,560 160,560 L 1040,560" stroke="#ECE6DC" stroke-opacity="0.25" stroke-width="4" stroke-dasharray="12 6" fill="none" filter="url(#rough-edge)" />
+  <path d="M 160,200 L 1040,200 C 1140,200 1140,380 1040,380 L 160,380 C 60,380 60,560 160,560 L 1040,560" stroke="#18181C" stroke-opacity="0.2" stroke-width="4" stroke-dasharray="12 6" fill="none" filter="url(#gentle-rough)" />
 
   <!-- ==================== LINE 1: PHASES 1 - 4 (y=200) ==================== -->
 
   <!-- PHASE 1: Hello Server (Completed) -->
-  <g transform="translate(100, 120)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#14B8A6" stroke="#ECE6DC" stroke-width="2.2" />
-    <path d="M 52,80 L 58,86 L 68,74" stroke="#18181C" stroke-width="3" stroke-linecap="round" />
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 1</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">FastAPI baseline served</text>
+  <g transform="translate(100, 120)">
+    <circle cx="60" cy="80" r="24" fill="#14B8A6" stroke="#18181C" stroke-width="2.2" filter="url(#gentle-rough)" />
+    <!-- Checkmark -->
+    <path d="M 52,80 L 58,86 L 68,74" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 1</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">FastAPI baseline served</text>
   </g>
 
   <!-- PHASE 2: Database (Active) -->
-  <g transform="translate(340, 120)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#E05A47" stroke-width="2.5" />
+  <g transform="translate(340, 120)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#E05A47" stroke-width="2.5" filter="url(#gentle-rough)" />
     <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#E05A47" font-weight="bold">2</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 2</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">SQLite DB + models</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 2</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">SQLite DB + models</text>
   </g>
 
   <!-- PHASE 3: Auth & Security -->
-  <g transform="translate(580, 120)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">3</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 3</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Bcrypt hashing &amp; JWT</text>
+  <g transform="translate(580, 120)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">3</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 3</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Bcrypt hashing &amp; JWT</text>
   </g>
 
   <!-- PHASE 4: Scraper Proxy -->
-  <g transform="translate(820, 120)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">4</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 4</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Async HTTPX preview crawler</text>
+  <g transform="translate(820, 120)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">4</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 4</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Async HTTPX preview crawler</text>
   </g>
 
 
   <!-- ==================== LINE 2: PHASES 5 - 7 (y=380, heading left) ==================== -->
 
   <!-- PHASE 7: Kanban Workspace -->
-  <g transform="translate(160, 300)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">7</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 7</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Kanban Drag-and-Drop</text>
+  <g transform="translate(160, 300)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">7</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 7</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Kanban Drag-and-Drop</text>
   </g>
 
   <!-- PHASE 6: Swipe Deck -->
-  <g transform="translate(460, 300)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">6</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 6</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Touch gesture swiper deck</text>
+  <g transform="translate(460, 300)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">6</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 6</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Touch gesture swiper deck</text>
   </g>
 
   <!-- PHASE 5: AI Engine -->
-  <g transform="translate(760, 300)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">5</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 5</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Gemini SDK compiler</text>
+  <g transform="translate(760, 300)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">5</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 5</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Gemini SDK compiler</text>
   </g>
 
 
   <!-- ==================== LINE 3: PHASES 8 - 10 (y=560, heading right) ==================== -->
 
   <!-- PHASE 8: Shared Cache -->
-  <g transform="translate(240, 480)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">8</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 8</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Global cache tag indexing</text>
+  <g transform="translate(240, 480)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">8</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 8</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Global cache tag indexing</text>
   </g>
 
   <!-- PHASE 9: Offline / Local LLM -->
-  <g transform="translate(540, 480)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">9</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 9</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Ollama local inference</text>
+  <g transform="translate(540, 480)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="54" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">9</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 9</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">Ollama local inference</text>
   </g>
 
   <!-- PHASE 10: PWA Offline Shell -->
-  <g transform="translate(840, 480)" filter="url(#rough-edge)">
-    <circle cx="60" cy="80" r="24" fill="#242429" stroke="#ECE6DC" stroke-width="1.8" />
-    <text x="50" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#ECE6DC">10</text>
-    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#ECE6DC">Phase 10</text>
-    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">PWA service workers</text>
+  <g transform="translate(840, 480)">
+    <circle cx="60" cy="80" r="24" fill="#FFFFFF" stroke="#18181C" stroke-width="1.8" filter="url(#gentle-rough)" />
+    <text x="50" y="86" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" fill="#18181C">10</text>
+    <text x="0" y="125" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="bold" fill="#18181C">Phase 10</text>
+    <text x="0" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#6B6B76">PWA service workers</text>
   </g>
 
   <!-- Subtitle Board -->
-  <g transform="translate(50, 670)" filter="url(#rough-edge)">
-    <rect width="1100" height="60" rx="8" fill="#242429" stroke="#ECE6DC" stroke-width="1.5" />
-    <text x="20" y="35" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" fill="#7E7E8A">Winding path of modular developer sprints. Complete one phase at a time to build a fully validated, local-first research engine.</text>
+  <g transform="translate(50, 670)">
+    <rect width="1100" height="60" rx="8" fill="#FFFFFF" stroke="#18181C" stroke-width="1.5" filter="url(#gentle-rough)" />
+    <text x="20" y="35" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" fill="#6B6B76">Winding path of modular developer sprints. Complete one phase at a time to build a fully validated, local-first research engine.</text>
   </g>
 </svg>
