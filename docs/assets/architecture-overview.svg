@@ -1,108 +1,99 @@
 <svg width="1000" height="600" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="terracotta-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#EF4444" />
-      <stop offset="100%" stop-color="#DC2626" />
-    </linearGradient>
-    <linearGradient id="cream-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F9FAFB" />
-      <stop offset="100%" stop-color="#D1D5DB" />
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    <!-- Turbulence displacement filter to simulate wobbly hand-drawn strokes -->
+    <filter id="rough-edge" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
     </filter>
   </defs>
 
-  <!-- Background panel -->
-  <rect width="1000" height="600" rx="16" fill="#11100F" />
+  <!-- Dark sketchpad background -->
+  <rect width="1000" height="600" rx="16" fill="#18181C" />
+  
+  <!-- Grid background details to simulate canvas -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <path d="M 0,50 L 1000,50 M 0,100 L 1000,100 M 0,150 L 1000,150 M 0,200 L 1000,200 M 0,250 L 1000,250 M 0,300 L 1000,300 M 0,350 L 1000,350 M 0,400 L 1000,400 M 0,450 L 1000,450 M 0,500 L 1000,500 M 0,550 L 1000,550" />
+    <path d="M 100,0 L 100,600 M 200,0 L 200,600 M 300,0 L 300,600 M 400,0 L 400,600 M 500,0 L 500,600 M 600,0 L 600,600 M 700,0 L 700,600 M 800,0 L 800,600 M 900,0 L 900,600" />
+  </g>
   
   <!-- Section Title -->
-  <text x="50" y="55" font-family="Georgia, serif" font-size="28" font-weight="bold" font-style="italic" fill="#F5F2EC">Architecture Overview</text>
-  <text x="50" y="85" font-family="'JetBrains Mono', monospace" font-size="14" fill="#8C8478">STATISTICS-BASED SHARED GLOBAL CACHE PIPELINE FLOW</text>
+  <text x="50" y="55" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="28" font-weight="bold" fill="#ECE6DC" filter="url(#rough-edge)">Architecture Overview</text>
+  <text x="50" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#7E7E8A" filter="url(#rough-edge)">STATISTICS-BASED SHARED GLOBAL CACHE PIPELINE FLOW</text>
 
   <!-- ── 1. FRONTEND SPA (Browser) ── -->
-  <g transform="translate(50, 200)">
-    <rect width="240" height="260" rx="12" fill="#1B1918" stroke="#F5F2EC" stroke-opacity="0.1" stroke-width="1.5" filter="url(#shadow)" />
-    <text x="24" y="38" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F5F2EC">FRONTEND SPA</text>
-    <text x="24" y="58" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8C8478">Native Client (Vanilla)</text>
+  <g transform="translate(50, 180)" filter="url(#rough-edge)">
+    <rect width="250" height="280" rx="10" fill="#242429" stroke="#ECE6DC" stroke-width="2" />
+    <text x="24" y="38" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" font-weight="bold" fill="#ECE6DC">FRONTEND SPA</text>
+    <text x="24" y="58" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">Native client (HTML/CSS/JS)</text>
     
     <!-- Sub-boxes -->
-    <rect x="20" y="80" width="200" height="40" rx="6" fill="#11100F" stroke="#333" />
-    <text x="32" y="104" font-family="-apple-system, sans-serif" font-size="13" fill="#C2BCB2">State Machine (app.js)</text>
+    <rect x="20" y="85" width="210" height="45" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="32" y="112" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" fill="#C2BCB2">State machine (app.js)</text>
     
-    <rect x="20" y="135" width="200" height="40" rx="6" fill="#11100F" stroke="#333" />
-    <text x="32" y="159" font-family="-apple-system, sans-serif" font-size="13" fill="#C2BCB2">Hash-Based Router</text>
+    <rect x="20" y="145" width="210" height="45" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="32" y="172" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" fill="#C2BCB2">Hash-based router</text>
     
-    <rect x="20" y="190" width="200" height="40" rx="6" fill="#11100F" stroke="#333" />
-    <text x="32" y="214" font-family="-apple-system, sans-serif" font-size="13" fill="#C2BCB2">Swipe Gesture &amp; Kanban</text>
+    <rect x="20" y="205" width="210" height="45" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="32" y="232" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" fill="#C2BCB2">Swipe deck &amp; Kanban</text>
   </g>
 
   <!-- ── 2. BACKEND API SERVER (FastAPI) ── -->
-  <g transform="translate(390, 150)">
-    <rect width="300" height="360" rx="12" fill="#1B1918" stroke="#F5F2EC" stroke-opacity="0.1" stroke-width="1.5" filter="url(#shadow)" />
-    <text x="24" y="38" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F5F2EC">BACKEND API</text>
-    <text x="24" y="58" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8C8478">FastAPI ASGI Core</text>
+  <g transform="translate(380, 130)" filter="url(#rough-edge)">
+    <rect width="320" height="380" rx="10" fill="#242429" stroke="#ECE6DC" stroke-width="2" />
+    <text x="24" y="38" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" font-weight="bold" fill="#ECE6DC">BACKEND API</text>
+    <text x="24" y="58" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">FastAPI Web App</text>
     
     <!-- get_db Session Factory -->
-    <rect x="20" y="90" width="260" height="45" rx="6" fill="#11100F" stroke="#333" />
-    <text x="32" y="112" font-family="'JetBrains Mono', monospace" font-size="12" fill="#E05A47">Depends(get_db)</text>
-    <text x="32" y="128" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">Thread-safe session injector</text>
+    <rect x="20" y="90" width="280" height="50" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="32" y="112" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#E05A47">Depends(get_db)</text>
+    <text x="32" y="130" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">SQLite session provider</text>
 
     <!-- Token validation Depends(get_current_user) -->
-    <rect x="20" y="150" width="260" height="45" rx="6" fill="#11100F" stroke="#333" />
-    <text x="32" y="172" font-family="'JetBrains Mono', monospace" font-size="12" fill="#14B8A6">Depends(get_current_user)</text>
-    <text x="32" y="188" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">JWT Security dependency</text>
+    <rect x="20" y="155" width="280" height="50" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="32" y="178" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#14B8A6">Depends(get_current_user)</text>
+    <text x="32" y="196" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">JWT Security interceptor</text>
 
     <!-- Shared cache logic -->
-    <rect x="20" y="210" width="260" height="60" rx="6" fill="#11100F" stroke="#E05A47" stroke-dasharray="4 4" stroke-width="1.5" />
-    <text x="32" y="232" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#F5F2EC">Cache Manager Logic</text>
-    <text x="32" y="252" font-family="-apple-system, sans-serif" font-size="12" fill="#C2BCB2">Check SQLite before executing pipeline</text>
+    <rect x="20" y="220" width="280" height="65" rx="6" fill="#18181C" stroke="#E05A47" stroke-dasharray="6 4" stroke-width="1.8" />
+    <text x="32" y="244" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" font-weight="bold" fill="#ECE6DC">Cache Manager Logic</text>
+    <text x="32" y="266" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="12" fill="#C2BCB2">Check local SQLite cache first</text>
 
     <!-- SQLite database connection -->
-    <rect x="20" y="285" width="260" height="50" rx="6" fill="#11100F" stroke="#333" />
-    <text x="32" y="307" font-family="-apple-system, sans-serif" font-size="13" fill="#C2BCB2">SQLAlchemy models</text>
-    <text x="32" y="323" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">SQLite (gripc0re.db)</text>
+    <rect x="20" y="300" width="280" height="55" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="32" y="322" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" fill="#C2BCB2">SQLAlchemy DB engine</text>
+    <text x="32" y="340" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">SQLite file: gripc0re.db</text>
   </g>
 
   <!-- ── 3. EXTERNAL PIPELINE (Gemini & Scraper) ── -->
-  <g transform="translate(780, 200)">
-    <rect width="180" height="260" rx="12" fill="#1B1918" stroke="#F5F2EC" stroke-opacity="0.1" stroke-width="1.5" filter="url(#shadow)" />
-    <text x="20" y="38" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#F5F2EC">PIPELINE</text>
-    <text x="20" y="58" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8C8478">External APIs</text>
+  <g transform="translate(770, 180)" filter="url(#rough-edge)">
+    <rect width="180" height="280" rx="10" fill="#242429" stroke="#ECE6DC" stroke-width="2" />
+    <text x="20" y="38" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="18" font-weight="bold" fill="#ECE6DC">PIPELINE</text>
+    <text x="20" y="58" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">AI &amp; Scraping</text>
     
     <!-- Gemini API -->
-    <rect x="15" y="85" width="150" height="65" rx="6" fill="#11100F" stroke="#333" />
-    <text x="27" y="108" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#A855F7">Google Gemini</text>
-    <text x="27" y="124" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">SDK client (JSON)</text>
-    <text x="27" y="138" font-family="-apple-system, sans-serif" font-size="10" fill="#8C8478">Cache-miss generation</text>
+    <rect x="15" y="85" width="150" height="70" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="27" y="108" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" font-weight="bold" fill="#A855F7">Google Gemini</text>
+    <text x="27" y="126" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">SDK JSON prompt</text>
+    <text x="27" y="142" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="10" fill="#7E7E8A">generation</text>
     
     <!-- HTTPX / BeautifulSoup -->
-    <rect x="15" y="165" width="150" height="65" rx="6" fill="#11100F" stroke="#333" />
-    <text x="27" y="188" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#D97706">Crawler Proxy</text>
-    <text x="27" y="204" font-family="-apple-system, sans-serif" font-size="11" fill="#8C8478">HTTPX &amp; BS4</text>
-    <text x="27" y="218" font-family="-apple-system, sans-serif" font-size="10" fill="#8C8478">Image parsing &amp; CORS</text>
+    <rect x="15" y="175" width="150" height="70" rx="6" fill="#18181C" stroke="#444" stroke-width="1.5" />
+    <text x="27" y="198" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="13" font-weight="bold" fill="#D97706">Crawler Proxy</text>
+    <text x="27" y="216" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A">HTTPX &amp; BS4</text>
+    <text x="27" y="232" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="10" fill="#7E7E8A">image crawler</text>
   </g>
 
-  <!-- ── FLOW ARROWS & LABELS ── -->
+  <!-- ── FLOW ARROWS & LABELS (Roughly Drawn) ── -->
 
   <!-- Frontend -> Backend -->
-  <path d="M 290 310 L 380 310" stroke="#F5F2EC" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)" />
-  <text x="302" y="300" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8C8478">JSON API</text>
-  <text x="302" y="328" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8C8478">(Bearer JWT)</text>
+  <path d="M 300 320 L 370 320" stroke="#ECE6DC" stroke-width="2.5" stroke-dasharray="3 3" filter="url(#rough-edge)" />
+  <text x="312" y="305" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#7E7E8A" filter="url(#rough-edge)">JSON API</text>
 
   <!-- Backend -> Pipeline -->
-  <path d="M 690 310 L 770 310" stroke="#E05A47" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="702" y="300" font-family="'JetBrains Mono', monospace" font-size="11" fill="#E05A47">Cache-Miss</text>
-  <text x="704" y="328" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8C8478">Trigger API</text>
+  <path d="M 700 320 L 760 320" stroke="#E05A47" stroke-width="2.5" filter="url(#rough-edge)" />
+  <text x="710" y="305" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#E05A47" filter="url(#rough-edge)">miss</text>
 
   <!-- Return Flow Pipeline -> Backend -->
-  <path d="M 770 350 L 690 350" stroke="#14B8A6" stroke-width="1.5" />
-  <text x="708" y="368" font-family="'JetBrains Mono', monospace" font-size="11" fill="#14B8A6">Write Cache</text>
-
-  <!-- Arrow marker definition -->
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#F5F2EC" />
-    </marker>
-  </defs>
+  <path d="M 760 360 L 700 360" stroke="#14B8A6" stroke-width="2" filter="url(#rough-edge)" />
+  <text x="712" y="385" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="11" fill="#14B8A6" filter="url(#rough-edge)">cache</text>
 </svg>
