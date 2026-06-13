@@ -131,7 +131,7 @@ personal pipeline runs on cache misses.
 
 ---
 
-## status
+## status & roadmap
 
 This is early. Here's roughly where things stand:
 
@@ -145,25 +145,6 @@ This is early. Here's roughly where things stand:
 - [ ] mobile-friendly / PWA support
 
 ---
-
-## project roadmap
-
-<p align="center">
-  <img src="docs/assets/roadmap.svg" alt="GripC0re lifetime roadmap" width="800">
-</p>
-
-To make development manageable for a single developer, the roadmap is divided into ten progressive, modular phases:
-
-* **Phase 1: Hello Server (Completed)** — FastAPI baseline configuration, static directory mounting, and client-side view mapping.
-* **Phase 2: Database Storage (Active)** — Local SQLite database connectivity with SQLAlchemy ORM tables (users, profiles, cards, trays).
-* **Phase 3: Secure Authenticated Gateway** — Bcrypt password hashing and Jose JWT middleware validations (`Depends(get_current_user)`).
-* **Phase 4: Async Web Scraper Proxy** — Non-blocking HTTPX async client, BeautifulSoup HTML node metadata parsing, and absolute favicon resolver.
-* **Phase 5: AI Briefing Compiler** — Gemini SDK connection, flat structured JSON instructions, bias slider evaluations, and parser fallbacks.
-* **Phase 6: Swipe Discovery Deck** — Card stack UI rendering, horizontal delta swiping, card removal animations, and backend vote logging.
-* **Phase 7: Kanban Task Tray** — Interactive board layout, browser Drag-and-Drop dataTransfer bindings, and tray item PUT endpoints.
-* **Phase 8: Shared Cache System** — Shared database indexing, persona tag matching, cache expiry times, and linear cost reduction locks.
-* **Phase 9: Local Inference (Ollama)** — Offline model connection allowing you to switch pipeline generation to a local LLM (e.g. Llama 3 via Ollama).
-* **Phase 10: Mobile PWA Shell** — Offline service worker caches, touch overrides, manifest files, and local device builds.
 
 ## getting started
 
