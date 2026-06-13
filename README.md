@@ -131,11 +131,7 @@ personal pipeline runs on cache misses.
 
 ---
 
-## status & roadmap
-
-<p align="center">
-  <img src="docs/assets/roadmap.svg" alt="GripC0re development roadmap" width="800">
-</p>
+## status
 
 This is early. Here's roughly where things stand:
 
@@ -149,6 +145,20 @@ This is early. Here's roughly where things stand:
 - [ ] mobile-friendly / PWA support
 
 ---
+
+## project roadmap
+
+<p align="center">
+  <img src="docs/assets/roadmap.svg" alt="GripC0re lifetime roadmap" width="800">
+</p>
+
+GripC0re's development is divided into five progressive lifecycle phases:
+
+* **Phase 1: Local MVP (Active)** — Core API backend on FastAPI, local SQLite cached data structure, basic Single-Page App, and local model key validations.
+* **Phase 2: Sync Pipeline** — Multi-source crawlers (Reddit, Hacker News, RSS feeds, arXiv papers) and shared cache configurations.
+* **Phase 3: Local LLMs** — Complete offline privacy utilizing local LLM providers (e.g. Ollama/Llama-3 connections).
+* **Phase 4: Offline PWA** — Offline service-workers for reading digest feeds, mapping gestures on mobile apps.
+* **Phase 5: Decentralized Network** — Peer-to-peer sync protocols to share feed updates directly between developer hubs without central servers.
 
 ## getting started
 
