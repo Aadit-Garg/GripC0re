@@ -39,8 +39,8 @@
 
   <!-- Center: SQLite Pool -->
   <g transform="translate(400, 300)">
-    <rect x="8" y="8" width="400" height="200" rx="14" fill="#FCEAE6" filter="url(#gentle-rough)" />
-    <rect x="0" y="0" width="400" height="200" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
+    <rect x="8" y="8" width="400" height="240" rx="14" fill="#FCEAE6" filter="url(#gentle-rough)" />
+    <rect x="0" y="0" width="400" height="240" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
     
     <rect x="25" y="25" width="165" height="40" rx="8" fill="rgba(224, 90, 71, 0.05)" stroke="#E05A47" stroke-width="2" filter="url(#gentle-rough)" />
     <text x="107.5" y="52" font-family="Consolas, 'Fira Code', monospace" font-size="18" font-weight="bold" fill="#E05A47" text-anchor="middle">Gl0bal P00l</text>
@@ -48,14 +48,16 @@
     <text x="25" y="100" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="22" font-weight="bold" fill="#18181C">SQLite Unified Cache</text>
     <line x1="25" y1="115" x2="375" y2="115" stroke="#E05A47" stroke-width="1.5" filter="url(#gentle-rough)" />
     
-    <text x="25" y="145" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">Indexes &amp; scores data based on pain point frequency.</text>
-    <text x="25" y="170" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">Avoids re-scraping the same thread for multiple users.</text>
+    <text x="25" y="145" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">Indexes &amp; scores data based</text>
+    <text x="25" y="165" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">on pain point frequency.</text>
+    <text x="25" y="195" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">Avoids re-scraping the same</text>
+    <text x="25" y="215" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">thread for multiple users.</text>
   </g>
 
   <!-- Right: Client -->
   <g transform="translate(900, 300)">
-    <rect x="8" y="8" width="240" height="200" rx="14" fill="#F5ECFE" filter="url(#gentle-rough)" />
-    <rect x="0" y="0" width="240" height="200" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
+    <rect x="8" y="8" width="240" height="240" rx="14" fill="#F5ECFE" filter="url(#gentle-rough)" />
+    <rect x="0" y="0" width="240" height="240" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
     
     <rect x="20" y="20" width="120" height="36" rx="8" fill="rgba(168, 85, 247, 0.05)" stroke="#A855F7" stroke-width="2" filter="url(#gentle-rough)" />
     <text x="80" y="44" font-family="Consolas, 'Fira Code', monospace" font-size="16" font-weight="bold" fill="#A855F7" text-anchor="middle">Client SPA</text>
@@ -63,8 +65,9 @@
     <text x="20" y="90" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="18" font-weight="bold" fill="#18181C">Kanban Deck</text>
     <line x1="20" y1="105" x2="220" y2="105" stroke="#A855F7" stroke-width="1.5" filter="url(#gentle-rough)" />
     
-    <text x="20" y="145" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">Instant fetch from local DB</text>
-    <text x="20" y="170" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">instead of slow external API</text>
+    <text x="20" y="145" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">Instant fetch from</text>
+    <text x="20" y="165" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">local DB instead of</text>
+    <text x="20" y="185" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">slow external API.</text>
   </g>
 
   <!-- Arrows -->
