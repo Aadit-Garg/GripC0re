@@ -161,7 +161,7 @@ This is early. Here's roughly where things stand:
 ## getting started
 
 ```bash
-git clone https://github.com/<your-username>/GripC0re.git
+git clone https://github.com/Aadit-Garg/GripC0re.git
 cd GripC0re
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
