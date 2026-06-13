@@ -1,0 +1,23 @@
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Local configuration and secret files (API Keys, JWT Secrets)
+.env
+
+# SQLite local database instance directory (prevents committing database records)
+instance/
+*.db
+*.sqlite3
+
+# IDEs and OS metadata files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
