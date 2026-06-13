@@ -1,0 +1,82 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gentle-rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <pattern id="dot-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#E5E0D8" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="600" rx="16" fill="#FEF9F0" />
+  <rect width="1200" height="600" fill="url(#dot-pattern)" />
+
+  <text x="60" y="60" font-family="Consolas, 'Fira Code', monospace" font-size="28" font-weight="bold" fill="#18181C">Global Shared Feed P00l Architecture (Tentative)</text>
+  <text x="60" y="85" font-family="'Virgil', 'Comic Sans MS', cursive, sans-serif" font-size="14" fill="#6B6B76">CONTINUOUS ASYNC SCRAPING AND CACHING OF HIGH-SIGNAL CONTEXT</text>
+
+  <!-- Left: Sources -->
+  <g transform="translate(60, 150)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2" filter="url(#gentle-rough)" />
+    <text x="120" y="42" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="18" fill="#18181C" text-anchor="middle">GitHub Issues</text>
+  </g>
+  <g transform="translate(60, 250)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2" filter="url(#gentle-rough)" />
+    <text x="120" y="42" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="18" fill="#E05A47" text-anchor="middle">Reddit /r/programming</text>
+  </g>
+  <g transform="translate(60, 350)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="2" filter="url(#gentle-rough)" />
+    <text x="120" y="42" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="18" fill="#D97706" text-anchor="middle">Hacker News</text>
+  </g>
+
+  <!-- Center: Scraper -->
+  <g transform="translate(400, 150)">
+    <rect x="8" y="8" width="400" height="100" rx="14" fill="#E6F7F5" filter="url(#gentle-rough)" />
+    <rect x="0" y="0" width="400" height="100" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
+    <text x="200" y="45" font-family="Consolas, 'Fira Code', monospace" font-size="20" font-weight="bold" fill="#14B8A6" text-anchor="middle">Async Scraper Pr0xy</text>
+    <text x="200" y="70" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#6B6B76" text-anchor="middle">HTTPX / BeautifulSoup Normalization</text>
+  </g>
+
+  <!-- Center: SQLite Pool -->
+  <g transform="translate(400, 300)">
+    <rect x="8" y="8" width="400" height="200" rx="14" fill="#FCEAE6" filter="url(#gentle-rough)" />
+    <rect x="0" y="0" width="400" height="200" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
+    
+    <rect x="25" y="25" width="165" height="40" rx="8" fill="rgba(224, 90, 71, 0.05)" stroke="#E05A47" stroke-width="2" filter="url(#gentle-rough)" />
+    <text x="107.5" y="52" font-family="Consolas, 'Fira Code', monospace" font-size="18" font-weight="bold" fill="#E05A47" text-anchor="middle">Gl0bal P00l</text>
+    
+    <text x="25" y="100" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="22" font-weight="bold" fill="#18181C">SQLite Unified Cache</text>
+    <line x1="25" y1="115" x2="375" y2="115" stroke="#E05A47" stroke-width="1.5" filter="url(#gentle-rough)" />
+    
+    <text x="25" y="145" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">Indexes &amp; scores data based on pain point frequency.</text>
+    <text x="25" y="170" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="16" fill="#4B4B54">Avoids re-scraping the same thread for multiple users.</text>
+  </g>
+
+  <!-- Right: Client -->
+  <g transform="translate(900, 300)">
+    <rect x="8" y="8" width="240" height="200" rx="14" fill="#F5ECFE" filter="url(#gentle-rough)" />
+    <rect x="0" y="0" width="240" height="200" rx="14" fill="#FFFFFF" stroke="#18181C" stroke-width="2.5" filter="url(#gentle-rough)" />
+    
+    <rect x="20" y="20" width="120" height="36" rx="8" fill="rgba(168, 85, 247, 0.05)" stroke="#A855F7" stroke-width="2" filter="url(#gentle-rough)" />
+    <text x="80" y="44" font-family="Consolas, 'Fira Code', monospace" font-size="16" font-weight="bold" fill="#A855F7" text-anchor="middle">Client SPA</text>
+    
+    <text x="20" y="90" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="18" font-weight="bold" fill="#18181C">Kanban Deck</text>
+    <line x1="20" y1="105" x2="220" y2="105" stroke="#A855F7" stroke-width="1.5" filter="url(#gentle-rough)" />
+    
+    <text x="20" y="145" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">Instant fetch from local DB</text>
+    <text x="20" y="170" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#4B4B54">instead of slow external API</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 310 185 L 350 185 L 350 200 L 390 200" stroke="#CCCCCC" stroke-width="2" fill="none" filter="url(#gentle-rough)" />
+  <path d="M 310 285 L 350 285 L 350 200 L 390 200" stroke="#CCCCCC" stroke-width="2" fill="none" filter="url(#gentle-rough)" />
+  <path d="M 310 385 L 350 385 L 350 200 L 390 200" stroke="#CCCCCC" stroke-width="2" fill="none" filter="url(#gentle-rough)" />
+  <polygon points="395,200 385,195 385,205" fill="#CCCCCC" filter="url(#gentle-rough)"/>
+
+  <path d="M 600 260 L 600 290" stroke="#14B8A6" stroke-width="3" filter="url(#gentle-rough)" />
+  <polygon points="600,295 595,285 605,285" fill="#14B8A6" filter="url(#gentle-rough)"/>
+
+  <path d="M 810 400 L 890 400" stroke="#E05A47" stroke-width="3" filter="url(#gentle-rough)" />
+  <polygon points="895,400 885,395 885,405" fill="#E05A47" filter="url(#gentle-rough)"/>
+  <text x="850" y="385" font-family="'Virgil', 'Comic Sans MS', cursive" font-size="14" fill="#E05A47" text-anchor="middle">Feed</text>
+</svg>
