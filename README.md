@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/gripcore-wordmark.svg" alt="Gripcore" width="480">
+  <img src="docs/assets/gripcore-wordmark.svg" alt="GripC0re" width="480">
 </p>
 
 <p align="center">
@@ -27,13 +27,13 @@ Nothing for PCB design, RF, power electronics, sensors. If your "huh, that's
 interesting" moment happens while staring at an oscilloscope instead of a
 terminal, there's currently nowhere for it to land.
 
-Gripcore is an attempt to fix both of those things at once.
+GripC0re is an attempt to fix both of those things at once.
 
 ---
 
 ## what it does
 
-Gripcore has two surfaces, both covering **electronics and computer science as
+GripC0re has two surfaces, both covering **electronics and computer science as
 a single audience**, not electronics as an afterthought inside a CS tool.
 
 ### the digest
@@ -99,7 +99,7 @@ happen on a cache miss, and the result gets written back for everyone else.
 Cost gets paid roughly once per item, not once per person.
 
 <p align="center">
-  <img src="docs/assets/architecture-overview.svg" alt="Gripcore architecture overview" width="640">
+  <img src="docs/assets/architecture-overview.svg" alt="GripC0re architecture overview" width="640">
 </p>
 
 ```
@@ -126,7 +126,7 @@ planning was AI-assisted; implementation is hand-written.
 
 Model access is **bring-your-own-key** — paste an API key for whichever
 provider you prefer (OpenRouter is the easiest starting point, since one key
-covers many models including free ones), and Gripcore uses it for your
+covers many models including free ones), and GripC0re uses it for your
 personal pipeline runs on cache misses.
 
 ---
@@ -149,8 +149,8 @@ This is early. Here's roughly where things stand:
 ## getting started
 
 ```bash
-git clone https://github.com/<your-username>/gripcore.git
-cd gripcore
+git clone https://github.com/<your-username>/GripC0re.git
+cd GripC0re
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload

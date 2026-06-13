@@ -36,7 +36,7 @@
     <!-- Wordmark text -->
     <g transform="translate(140, 85)">
       <!-- Main brand name -->
-      <text x="0" y="0" font-family="Georgia, serif" font-size="64" font-weight="bold" font-style="italic" fill="url(#cream-grad)" letter-spacing="1">GripCore</text>
+      <text x="0" y="0" font-family="Georgia, serif" font-size="64" font-weight="bold" font-style="italic" fill="url(#cream-grad)" letter-spacing="1">GripC0re</text>
       <!-- Accent dot -->
       <circle cx="272" cy="-12" r="8" fill="url(#terracotta-grad)" />
       
